@@ -1,0 +1,295 @@
+/****************************************
+  Inherited Syles
+*****************************************/
+
+html {
+    box-sizing: border-box;
+    color: white;
+    font: 12pt 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+
+/****************************************
+  Defaults
+*****************************************/
+
+body {
+	margin: 0;
+}
+
+h1 {
+	margin: 0;
+	font-size: 43px;
+}
+
+h2 {
+	font-size: 19px;
+	font-weight: bold;
+	margin: 15px 0;
+}
+
+h6 {
+	font-size: 14;
+	font-weight: normal;
+}
+
+/****************************************
+  Primary Layout
+*****************************************/
+
+.panel > div {
+	position: relative;
+	width: 1060px;
+	margin: auto;
+}
+
+.hero {
+	background: radial-gradient(rgba(0, 142, 168, 0.27), #008EA8), url('/home/ryan/Sites/Milestone 3/Project 3/CSS Puppy Love (final)/images/bg.jpg');
+	background-size: cover;
+}
+
+.hero > div {
+	min-height: 450px;
+}
+
+.primary-content {
+	background-color: #D7E1E7;
+	color: #453430;
+}
+
+.primary-content > div {
+	text-align: center;
+	/*background-color: white;*/
+	min-height: 550px;
+}
+
+.primary-content main {
+	background-color: white;
+}
+
+/****************************************
+Hero, Components
+*****************************************/
+
+.primary-header {
+	position: relative;
+	height: 150px;
+}
+
+.logo {
+	font-family: 'Pacifico', cursive;
+	display: inline-block;
+	font-family:'Lobster', cursive;
+	text-decoration: none;
+	font-size: 60px; 
+	margin: 5px;
+}
+
+.search-field {
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+
+.search-field input[type='text'] {
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.27);
+	padding-left: 2px;
+}
+
+.search-field input[type='button'] {
+	background-color: #F54C00;
+	border-radius: 3px;
+	border: none;
+	padding: 5px;
+}
+
+.primary-nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.27);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+	text-transform: uppercase;
+}
+
+.primary-nav a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 26px;
+	font-weight: 900;
+}
+
+.main-heading {
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+}
+
+.main-heading p {
+	margin: 15px 0;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.main-heading span {
+	font-weight: 900;
+}
+
+/****************************************
+Primary-content, Components
+*****************************************/
+
+.breakouts > div {
+	/* background-color: #0F0; */
+	background-color: white;
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+ 	margin: 0 10px;
+	transform: translateY(-20px);
+	border-top: 2px solid;
+}
+
+.breakouts p {
+	margin-bottom: 15px;
+}
+
+.breakouts button {
+	border-radius: 5px;
+	padding: 5px 9px;
+	margin-bottom: 15px;
+	border: 2px solid;
+	background-color: white;
+}
+
+.breakout.liter, .breakout.liter button {
+	border-color: #E84F01;
+}
+
+.breakout.liter button {
+	color: #E84F01;
+}
+
+.breakout.food, .breakout.food button {
+	border-color: #96D72E;
+}
+
+.breakout.food button {
+	color: #96D72E;
+}
+
+.breakout.sell, .breakout.sell button {
+	border-color: #008FD3;
+}
+
+.breakout.sell button {
+	color: #008FD3;
+} 
+
+main, .breakouts > div {
+	box-shadow: 0 0 10px -3px black;
+}
+
+
+/****************************************
+  components [Abstraction]
+*****************************************/
+
+.subject-list, .subject-tiles {
+	padding: 10px;
+}
+
+.container {
+	background-color: #E8F3F9;
+}
+
+.container h6, p {
+	margin: 0;
+}
+
+/****************************************
+  Components [Subject List]
+*****************************************/
+
+.subject-list {
+	width: 40%;
+	text-align: left;
+	float: left;
+}
+
+.subject-list > * + * {
+	margin-top: 10px;
+}
+
+.subject-list .container {
+	overflow: hidden;
+}
+
+.subject-list img {
+	float: left;
+}
+
+.subject-list img {
+	height: 100%;
+	width: 100px;
+}
+
+.subject-list .container div:last-child {
+	padding: 5px;
+	overflow: hidden;
+}
+
+.subject-list .container h6 {
+	color: #31AFE5;
+	font-size: 21px;
+}
+
+/****************************************
+  Components [Subject Tiles]
+****************************************/
+
+.subject-tiles {
+	width: 60%;
+	display: inline-block;
+	padding: 15px;
+	text-align: center;
+}
+
+.subject-tiles .container {
+	text-align: left;
+	width: 180px;
+	vertical-align: top;
+	display: inline-block;
+	margin-bottom: 15px;
+	margin-right: 17px; 
+}
+
+.subject-tiles img {
+ 	height: 181px; 
+	width: 100%;
+	display: block;
+}
+
+.subject-tiles .container div:last-child {
+	overflow: hidden;
+}
+
+.subject-tiles h6, .subject-tiles p {
+	color: #4D7A15;
+}
+
+.subject-tiles .container h6 {
+	background-color: #8CD133;
+}
